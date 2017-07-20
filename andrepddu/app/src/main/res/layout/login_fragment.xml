@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_fragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/login_fragment_inner_layout"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/login_fragment_text_login"
+            android:inputType="text"
+            android:hint="@string/login_activity_text_login"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <EditText
+            android:id="@+id/login_fragment_text_password"
+            android:inputType="textPassword"
+            android:hint="@string/login_activity_text_password"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/login_fragment_button_enter"
+            android:text="@string/login_activity_button_sign_in"
+            android:onClick="onClick"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/background_light"/>
+
+        <Button
+            android:id="@+id/login_fragment_button_registration"
+            android:text="@string/login_activity_button_registration"
+            android:onClick="onClick"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/background_light"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
