@@ -29,9 +29,6 @@ public class AppSettings extends AppCompatActivity implements View.OnClickListen
     private Button buttonExit;
     private TextView textViewNik, textViewGender;
 
-    private CallbackManager callbackManager;
-    private Context context;
-
     //firebase
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -43,7 +40,7 @@ public class AppSettings extends AppCompatActivity implements View.OnClickListen
 
         mAuth = FirebaseAuth.getInstance();
 
-        context = this;
+
 //        callbackManager = CallbackManager.Factory.create();
 
         userEntity = Utils.loadUserEntity(this);
@@ -59,12 +56,6 @@ public class AppSettings extends AppCompatActivity implements View.OnClickListen
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        callbackManager.onActivityResult(requestCode, resultCode, data);
-//    }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -74,8 +65,8 @@ public class AppSettings extends AppCompatActivity implements View.OnClickListen
                 userEntity.clear();
                 Utils.saveUserEntity(this, userEntity);
                 Intent intent = new Intent(AppSettings.this, EnterActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);      //он закроет все активности, которые "выше" вызванной
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);      //он закроет все активности, которые "выше" вызванной
                 Log.v("AppSettings", userEntity.toString());
                 startActivity(intent);
                 break;

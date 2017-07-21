@@ -25,8 +25,6 @@ public class EnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_activity);
 
-//        loginFragment = getFragmentManager().findFragmentById(R.id.);
-
         loginFragment = new LoginFragment();
 
         transaction = getSupportFragmentManager().beginTransaction();

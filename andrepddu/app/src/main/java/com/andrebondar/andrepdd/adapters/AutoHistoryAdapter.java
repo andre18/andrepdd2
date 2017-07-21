@@ -92,10 +92,5 @@ public class AutoHistoryAdapter extends BaseAdapter {
 
         public ImageView mImageView;
         public TextView mTextView;
-
-//        public ViewHolder(View itemView) {
-//            super(itemView);
-//            mTextView = (TextView) itemView.findViewById(R.id.auto_history_item_text);
-//        }
     }
 }

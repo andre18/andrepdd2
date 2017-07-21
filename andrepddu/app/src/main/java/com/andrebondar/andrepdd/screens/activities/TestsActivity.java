@@ -42,9 +42,6 @@ public class TestsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startGetOutTestAlertActivity(TestsActivity.this);
-//        if (userChoise) {
-//            super.onBackPressed(); //it allows us to get out of the activity
-//        }
     }
 
     private void startGetOutTestAlertActivity(Context context) {
